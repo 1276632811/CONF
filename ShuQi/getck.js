@@ -110,6 +110,22 @@ else if ($request.url.indexOf('/manual/receive') != -1) {
 		$.setdata(theReadCK ,'receiveboby')	
 	}		
 }
+else if ($request.url.indexOf('/api/prize/lottery') != -1) {
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说极速版获取jsvedioreward10hearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'jsvedioreward10hearder')	
+	}
+    var body = $request.body;
+	if(body)
+	{
+		$.msg('书旗小说极速版获取jsvedioreward10boby成功');
+		let theReadCK=body;
+		$.setdata(theReadCK ,'jsvedioreward10boby')	
+	}		
+}
 $.done();
 
 
