@@ -7,55 +7,107 @@ $.idx =$.getval('sqxs');
 if(typeof $.idx === 'undefined')
 	$.idx=1;
 
-if ($request.url.indexOf('/NewTaskIos/getSign') != -1) {
-    var headers = $request.headers;
-    if (headers) {
-        $.msg($.name, `获取Cookie: 成功🎉`, ``);
-        $.setdata(JSON.stringify(headers), 'signheaderVal');
-    }
-}
-else if ($request.url.indexOf('/article/complete') != -1) {
-    var body = $request.body;
-    if (body) {
-        $.msg($.name, `获取Cookie: 成功🎉`, ``);
-        $.setdata(body, 'articlebodyVal');
-    }
-
-}
-else if ($request.url.indexOf('/user/stay.json') != -1) {
-    var body = $request.body;
-    if (body) {
-        $.msg($.name, `获取Cookie: 成功🎉`, ``);
-        $.setdata(body, 'timebodyVal');
-    }
-
-}
-
-else if ($request.url.indexOf('/v5/signInAction') != -1) {
+if ($request.url.indexOf('/v5/signInAction') != -1) {
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说获取dailysignhearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'dailysignhearder')	
+	}
     var body = $request.body;
 	if(body)
 	{
-		$.msg('书旗小说极速版'+ $.idx,'获取阅读ck成功(共3个ck)');
+		$.msg('书旗小说获取dailysignboby成功');
 		let theSignCK=body;
-		$.setdata(theSignCK ,'theSignCK'+ $.idx)	
+		$.setdata(theSignCK ,'dailysignboby')	
+	}		
+}
+else if ($request.url.indexOf('/reward_video/reward') != -1) {
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说获取vediohearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'vediohearder')	
+	}
+    var body = $request.body;
+	if(body)
+	{
+		$.msg('书旗小说获取vediorewarddrawboby成功');
+		let theReadCK=body;
+		$.setdata(theReadCK ,'vediorewarddrawboby')	
+	}		
+}
+else if ($request.url.indexOf('/lottery/draw') != -1) {
+    var url = $request.url
+    	if(url)
+	{
+		$.msg('书旗小说获取drawrewardurl成功');
+		let theSignCK=url;
+		$.setdata(theSignCK ,'drawrewardurl')	
+	}
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说获取drawrewardhearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'drawrewardhearder')	
+	}
+    var body = $request.body;
+	if(body)
+	{
+		$.msg('书旗小说获取阅读drawrewardboby成功');
+		let theTotherCK=body;
+		$.setdata(theTotherCK ,'drawrewardboby')	
 	}		
 }
 else if ($request.url.indexOf('/pendant/lottery') != -1) {
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说获取readhearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'readhearder')	
+	}
     var body = $request.body;
 	if(body)
 	{
-		$.msg('书旗小说极速版'+ $.idx,'获取阅读ck成功(共3个ck)');
+		$.msg('书旗小说获取readboby成功');
 		let theReadCK=body;
-		$.setdata(theReadCK ,'theReadCK'+ $.idx)	
+		$.setdata(theReadCK ,'readboby')	
 	}		
 }
 else if ($request.url.indexOf('/task/reward') != -1) {
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说获取sharehearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'sharehearder')	
+	}
     var body = $request.body;
 	if(body)
 	{
-		$.msg('书旗小说极速版'+ $.idx,'获取阅读ck成功(共3个ck)');
-		let theTotherCK=body;
-		$.setdata(theTotherCK ,'theTotherCK'+ $.idx)	
+		$.msg('书旗小说获取shareboby成功');
+		let theReadCK=body;
+		$.setdata(theReadCK ,'shareboby')	
+	}		
+}
+else if ($request.url.indexOf('/manual/receive') != -1) {
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说获取receivehearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'receivehearder')	
+	}
+    var body = $request.body;
+	if(body)
+	{
+		$.msg('书旗小说获取receiveboby成功');
+		let theReadCK=body;
+		$.setdata(theReadCK ,'receiveboby')	
 	}		
 }
 $.done();
