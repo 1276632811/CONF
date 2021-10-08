@@ -37,6 +37,29 @@ else if ($request.url.indexOf('/api/prize/lottery') != -1) {
         $.setdata(theReadCK ,'jsvedio10boby')	
       }		
 }
+else if ($request.url.indexOf('/lottery/draw') != -1) {
+    var url = $request.url
+    	if(url)
+	{
+		$.msg('书旗小说获取drawrewardurl成功');
+		let theSignCK=url;
+		$.setdata(theSignCK ,'drawrewardurl')	
+	}
+    var hearder = JSON.stringify($request.headers)
+    	if(hearder)
+	{
+		$.msg('书旗小说获取drawrewardhearder成功');
+		let theSignCK=hearder;
+		$.setdata(theSignCK ,'drawrewardhearder')	
+	}
+    var body = $request.body;
+	if(body)
+	{
+		$.msg('书旗小说获取阅读drawrewardboby成功');
+		let theTotherCK=body;
+		$.setdata(theTotherCK ,'drawrewardboby')	
+	}		
+}
 $.done();
 
 
