@@ -3,19 +3,6 @@
     "name": "1276632811 脚本订阅",
     "author": "@1276632811",
     "apps": [
-         {
-            "id": "Youth",
-            "name": "中青",
-            "keys": [
-                "signheaderVal",
-                "articlebodyVal",
-                "timebodyVal"
-            ],
-            "icons": [
-                "https://z3.ax1x.com/2021/09/05/hWqjcd.png",
-                "https://z3.ax1x.com/2021/09/05/hWqjcd.png"
-            ]
-        },
         {
             "id": "dyjsb",
             "name": "抖音极速版",
@@ -24,7 +11,10 @@
             ],
             "icons": [
                 "https://z3.ax1x.com/2021/09/05/hWqjcd.png"
-            ]
+            ],
+			"author": "@1276632811",
+			"repo": "https://raw.githubusercontent.com/1276632811/CONF/main/boxjs.json",
+			"script": "https://raw.githubusercontent.com/1276632811/CONF/main/dyjsb/dyjsb.js"
         },
 		{
             "id": "fqct",
@@ -36,7 +26,10 @@
             ],
             "icons": [
                 "https://z3.ax1x.com/2021/09/05/hWqjcd.png"
-            ]
+            ],
+			"author": "@1276632811",
+			"repo": "https://raw.githubusercontent.com/1276632811/CONF/main/boxjs.json",
+			"script": "https://raw.githubusercontent.com/1276632811/CONF/main/fqct/fqct.js"
         }
     ]
 }
