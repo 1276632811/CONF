@@ -25,6 +25,19 @@
             "icons": [
                 "https://z3.ax1x.com/2021/09/05/hWqjcd.png"
             ]
+        },
+		{
+            "id": "fqct",
+            "name": "番茄畅听",
+            "keys": [
+                "fccturl",
+				"fqct",
+				"host"
+            ],
+            "icons": [
+                "https://z3.ax1x.com/2021/09/05/hWqjcd.png"
+            ]
         }
     ]
 }
+
